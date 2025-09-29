@@ -1,0 +1,7 @@
+apache-airflow==2.9.2
+psycopg2-binary
+pandas
+yfinance
+SQLAlchemy
+pytest
+flake8
