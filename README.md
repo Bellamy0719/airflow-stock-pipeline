@@ -41,13 +41,13 @@ Visualization Example
 
 Future Improvements
 
--Parameterization: Move tickers & configs to Airflow Variables / .env
--Monitoring & Alerts: Prometheus + Grafana, Slack/email alerts
--More indicators: Sharpe Ratio, ATR, Beta, Volume MAs
--Trading signals: More advanced buy/sell logic
--Prediction models: ARIMA, Random Forest, simple ML models
--Data governance: Great Expectations reports, schema versioning
--Engineering practices: CI/CD with Docker builds, unit tests, black/flake8 auto-formatting
+- Parameterization: Move tickers & configs to Airflow Variables / .env
+- Monitoring & Alerts: Prometheus + Grafana, Slack/email alerts
+- More indicators: Sharpe Ratio, ATR, Beta, Volume MAs
+- Trading signals: More advanced buy/sell logic
+- Prediction models: ARIMA, Random Forest, simple ML models
+- Data governance: Great Expectations reports, schema versioning
+- Engineering practices: CI/CD with Docker builds, unit tests, black/flake8 auto-formatting
 
 How to Run
 1. Copy the repo
