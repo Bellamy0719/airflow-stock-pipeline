@@ -30,13 +30,21 @@ airflow-stock-pipeline/
 ```
 
 flowchart TD
-    A[Fetch stock data] --> B[Transform & add indicators]
+    A[Fetch stock data] 
+    A --> B[Transform & add indicators]
     B --> C[Validate data quality]
     C --> D[Load into PostgreSQL]
     D --> E[Visualize in Tableau]
 
 Visualization Example
-
+![Tableau database screenshot](images/tableau_database.png)
+![Tableau database screenshot](images/tableau_k_chart.png)
+![Tableau database screenshot](images/tableau_macd.png)
+![Tableau database screenshot](images/tableau_bolling_upper_lower.png)
+![Tableau database screenshot](images/tableau_buy_sell_signal.png)
+![Tableau database screenshot](images/tableau_rsi.png)
+![Tableau database screenshot](images/airflow_task_dependency_order.png)
+![Tableau database screenshot](images/airflow_logging.png)
 (Insert Tableau screenshot here — e.g., SMA + Buy/Sell signals on AAPL)
 
 Future Improvements
