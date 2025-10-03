@@ -36,6 +36,55 @@ flowchart TD
     C --> D[Load into PostgreSQL]
     D --> E[Visualize in Tableau]
 
+# Airflow ETL Pipeline with Docker, PostgreSQL, and Tableau
+
+## 📌 Overview
+Portfolio project demonstrating an **ETL pipeline** orchestrated with **Apache Airflow (Dockerized)**.  
+Data is extracted via Python (Pandas), transformed with feature engineering, and loaded into **PostgreSQL**.  
+Finally, data is visualized in **Tableau** dashboards.  
+
+This project showcases **production-oriented ETL design**, data quality checks, and orchestration using Airflow.
+
+---
+
+## 🏗️ Architecture
+
+```
+      yfinance API
+           │
+           ▼
+   ┌──────────────┐
+   │   Extract    │
+   │   (Pandas)   │
+   └──────────────┘
+           │
+           ▼
+  ┌──────────────────┐
+  │    Transform     │
+  │   - SMA, RSI     │
+  │   - MACD, Boll   │
+  │   - Flags        │
+  └──────────────────┘
+           │
+           ▼
+   ┌───────────────┐
+   │     Load      │
+   │ PostgreSQL DB │
+   └───────────────┘
+           │
+           ▼
+   ┌───────────────┐
+   │ Visualization │
+   │   Tableau BI  │
+   └───────────────┘
+
+   Orchestrated by:
+   ┌───────────────┐
+   │   Airflow     │  ———— Daily Dags(python script)
+   │ (Dockerized)  │
+   └───────────────┘
+```
+
 Visualization Example
 ![Tableau database screenshot](images/tableau_database.png)
 ![Tableau database screenshot](images/tableau_k_chart.png)
